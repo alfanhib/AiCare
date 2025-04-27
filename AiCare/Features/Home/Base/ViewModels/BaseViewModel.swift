@@ -16,6 +16,30 @@ class BaseViewModel: ObservableObject {
         currentTab = tab
     }
     
+    @Published var isLoading = false
+    @Published var errorMessage: String?
+    
+    func showError(_ error: Error) {
+        DispatchQueue.main.async { [weak self] in
+            self?.errorMessage = error.localizedDescription
+        }
+    }
+    
+    func startLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading = true
+        }
+    }
+    
+    func stopLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading = false
+        }
+    }
+    
+    deinit {
+    }
+    
 }
 
 enum DashboardTabType: String {

@@ -12,10 +12,23 @@ class DependencyContainer {
     private init() {}
     
     static func register() {
-        registerServices()
+        Task {
+            await registerServices()
+            await registerRepositories()
+            
+        }
     }
     
     private static func registerServices() {
+    }
+    
+    @MainActor
+    private static func registerRepositories() {
+        let modelContext = SwiftDataStack.shared.mainContext
+        
+        InjectedValues[\.plantRepository] = SwiftDataPlantRepository(modelContext: modelContext)
+        InjectedValues[\.roomRepository] = SwiftDataRoomRepository(modelContext: modelContext)
+        InjectedValues[\.scheduleRepository] = SwiftDataScheduleRepository(modelContext: modelContext)
     }
     
 }

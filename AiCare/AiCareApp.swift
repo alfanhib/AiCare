@@ -10,10 +10,10 @@ import SwiftUI
 @main
 struct AiCareApp: App {
     
-//    init(){
-//        DependencyContainer.register()
-//    }
-//    
+    init(){
+        DependencyContainer.register()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()

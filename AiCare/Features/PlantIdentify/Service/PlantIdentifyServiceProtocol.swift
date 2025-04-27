@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 protocol PlantIdentifyServiceProtocol {
-//    func fetchPlantIdentificationItems() async throws -> [PlantIdentificationItem]
-    func fetchPlantIdentificationItems(image: UIImage) async throws -> PlantIdentificationResponse
+    func fetchPlantIdentificationItems(
+        image: UIImage,
+        latitude: Double?,
+        longitude: Double?
+    ) async throws -> PlantIdentificationResponse
 }

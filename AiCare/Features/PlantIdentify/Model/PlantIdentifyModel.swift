@@ -113,7 +113,7 @@ struct PlantDetails: Codable {
     let synonyms: [String]?
     let image: PlantImage?
     let edibleParts: [String]?
-    let watering: String?
+    let watering: Watering?
     let bestLightCondition: String?
     let bestSoilType: String?
     let commonUses: String?
@@ -192,4 +192,9 @@ struct IsPlant: Codable {
     let probability: Double
     let threshold: Double
     let binary: Bool
+}
+
+struct Watering: Codable {
+    let min: Int?
+    let max: Int?
 }

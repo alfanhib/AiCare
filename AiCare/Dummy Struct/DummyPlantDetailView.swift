@@ -45,7 +45,7 @@ struct PreviewPlantDetailData {
             synonyms: ["Philodendron pertusum", "Tornelia fragrans"],
             image: plantImage,
             edibleParts: ["fruit"],
-            watering: "Medium",
+            watering: Watering(min: 1, max: 1),
             bestLightCondition: "This plant thrives in medium to bright indirect light. It can tolerate lower light conditions, but growth may slow. Avoid direct sunlight as it can burn the leaves.",
             bestSoilType: "Well-draining potting mix rich in organic matter. A mix designed for aroids or a regular potting soil with added perlite, orchid bark, and/or coco coir works well.",
             commonUses: "Commonly used as an indoor ornamental plant, prized for its dramatic, perforated leaves and tropical appearance.",
