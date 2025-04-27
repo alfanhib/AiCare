@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct AiCareApp: App {
+    
+//    init(){
+//        DependencyContainer.register()
+//    }
+//    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
